@@ -1,6 +1,6 @@
 {
   "name": "@eklingen/vinyl-stream-postcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small vinyl-stream wrapper -aka Gulp plugin- for postcss.",
   "repository": {
     "type": "git",
@@ -36,7 +36,7 @@
     "eslint-plugin-standard": "^4.0.1"
   },
   "dependencies": {
-    "postcss": "^7.0.21",
+    "postcss": "^7.0.23",
     "vinyl-sourcemaps-apply": "^0.2.1"
   }
 }
