@@ -1,6 +1,7 @@
 
 # Changelog
 
+v1.0.5 - Pinned `source-map` version to `~0.6.1`
 v1.0.4 - Fixed another issue with source maps
 v1.0.3 - Fixed issue with source maps
 v1.0.2 - Internal refactoring
