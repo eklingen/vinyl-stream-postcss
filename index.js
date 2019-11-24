@@ -45,7 +45,9 @@ function postcssWrapper (config = { plugins: {}, options: {} }) {
       }
 
       if (file.sourceMap && file.sourceMap.mappings !== '') {
-        file.sourceMap = JSON.parse(SourceMapGenerator.fromSourceMap(new SourceMapConsumer(sourceMap)).applySourceMap(new SourceMapConsumer(file.sourceMap)).toString().applySourceMap(new SourceMapConsumer(file.sourceMap)).toString())
+        const generator = (SourceMapGenerator.fromSourceMap(new SourceMapConsumer(sourceMap)))
+        generator.applySourceMap(new SourceMapConsumer(file.sourceMap))
+        file.sourceMap = JSON.parse(generator.toString())
       } else {
         file.sourceMap = sourceMap
       }
