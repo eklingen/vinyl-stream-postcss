@@ -7,10 +7,7 @@ const { join, dirname, basename, extname, relative } = require('path')
 const DEFAULT_OPTIONS = {
   postcss: {
     plugins: [],
-    options: {
-      parser: 'scss',
-      stringifier: null
-    }
+    options: {}
   }
 }
 

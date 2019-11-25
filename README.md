@@ -24,7 +24,7 @@ There is one option.
 
 ### `postcss`
 
-Both the `plugins` array and the `options` object will be passed to postcss.
+Both the `plugins` array and the `options` object will be passed to `postcss`. See the ["postcss"](https://www.npmjs.com/package/postcss) for more information.
 
 ```
 postcssWrapper({
