@@ -1,7 +1,7 @@
 
 # Small vinyl-stream wrapper -aka Gulp plugin- for postcss
 
-Run PostCSS within your streams. This fully supports sourcemaps.
+Run PostCSS within your streams. This fully supports source maps.
 
 > *NOTE:* No tests have been written yet!
 
@@ -17,6 +17,26 @@ stream.pipe(postcssWrapper())
 ```
 
 This plugin assumes an existing configuration dotfile where postcss can find it.
+
+## Options
+
+There is one option.
+
+### `postcss`
+
+Both the `plugins` array and the `options` object will be passed to postcss.
+
+```
+postcssWrapper({
+  postcss: {
+    plugins: [],
+    options: {
+      parser: 'scss',
+      stringifier: null
+    }
+  }
+})
+```
 
 ## Dependencies
 

@@ -4,20 +4,30 @@
 const { Transform } = require('stream')
 const { join, dirname, basename, extname, relative } = require('path')
 
-function postcssWrapper (config = { plugins: {}, options: {} }) {
+const DEFAULT_OPTIONS = {
+  postcss: {
+    plugins: [],
+    options: {
+      parser: 'scss',
+      stringifier: null
+    }
+  }
+}
+
+function postcssWrapper (options = {}) {
   const { SourceMapConsumer, SourceMapGenerator } = require('source-map')
   const postcss = require('postcss')
 
   async function transform (file, encoding, callback) {
-    const DEFAULT_OPTIONS = { from: file.path, to: file.path, map: file.sourceMap ? { inline: false, sourcesContent: true, annotation: false } : false }
-
-    config.options = ({ ...DEFAULT_OPTIONS, ...config.options })
+    options = { ...DEFAULT_OPTIONS, ...options }
+    options.postcss = { ...DEFAULT_OPTIONS.postcss, ...options.postcss }
+    options.postcss.options = { ...DEFAULT_OPTIONS.postcss.options, ...options.postcss.options, from: file.path, to: file.path, map: file.sourceMap ? { inline: false, sourcesContent: true, annotation: false } : false }
 
     let result
-    const compiler = postcss(config.plugins)
+    const compiler = postcss(options.postcss.plugins)
 
     try {
-      result = await compiler.process(file.contents.toString(), config.options)
+      result = await compiler.process(file.contents.toString(), options.postcss.options)
     } catch (error) {
       if (error.name === 'CssSyntaxError') {
         return callback(new Error(`${error.message}\n${error.showSourceCode()}\n`, { error, fileName: error.file || file.path, lineNumber: error.line, showProperties: false, showStack: false }))
