@@ -1,6 +1,7 @@
 
 # Changelog
 
+v1.2.0 - First release with a tag
 v1.1.1 - Changed default options
 v1.1.0 - Moved `postcss` config to `options.postcss`
 v1.0.5 - Pinned `source-map` version to `~0.6.1`

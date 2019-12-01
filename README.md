@@ -11,7 +11,7 @@ Run PostCSS within your streams. This fully supports source maps.
 
 ## Usage
 
-```
+```javascript
 const postcssWrapper = require('@eklingen/vinyl-stream-postcss')
 stream.pipe(postcssWrapper())
 ```
@@ -26,7 +26,7 @@ There is one option.
 
 Both the `plugins` array and the `options` object will be passed to `postcss`. See the ["postcss"](https://www.npmjs.com/package/postcss) for more information.
 
-```
+```javascript
 postcssWrapper({
   postcss: {
     plugins: [],
