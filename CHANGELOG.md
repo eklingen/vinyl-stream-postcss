@@ -1,6 +1,8 @@
 
 # Changelog
 
+v1.2.2 - Upgrade dependencies
+v1.2.1 - Upgrade dependencies
 v1.2.0 - First release with a tag
 v1.1.1 - Changed default options
 v1.1.0 - Moved `postcss` config to `options.postcss`
