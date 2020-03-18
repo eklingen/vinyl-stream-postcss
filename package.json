@@ -29,14 +29,14 @@
     "test": "echo '** TODO: Write tests! **'; echo 'Linting...'; eslint index.js --fix;"
   },
   "dependencies": {
-    "postcss": "^7.0.26",
+    "postcss": "^7.0.27",
     "source-map": "~0.6.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
-    "eslint-plugin-simple-import-sort": "^5.0.1",
+    "eslint-plugin-simple-import-sort": "^5.0.2",
     "eslint-plugin-smells": "^1.0.1"
   }
 }
