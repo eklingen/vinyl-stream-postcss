@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "postcss": "^7.0.32",
-    "source-map": "~0.7.3"
+    "source-map": "0.6.1"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
