@@ -1,6 +1,6 @@
 {
   "name": "@eklingen/vinyl-stream-postcss",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Small vinyl-stream wrapper -aka Gulp plugin- for postcss.",
   "repository": {
     "type": "git",
