@@ -1,6 +1,7 @@
 
 # Changelog
 
+v1.2.8 - Upgrade dependencies
 v1.2.7 - Reverted inadvertend source-map upgrade
 v1.2.6 - Upgrade dependencies
 v1.2.5 - Upgrade dependencies
