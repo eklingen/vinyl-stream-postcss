@@ -1,6 +1,7 @@
 
 # Changelog
 
+v2.0.1 - Upgrade source-map
 v2.0.0 - Upgraded PostCSS to v8
 v1.2.8 - Upgrade dependencies
 v1.2.7 - Reverted inadvertend source-map upgrade
