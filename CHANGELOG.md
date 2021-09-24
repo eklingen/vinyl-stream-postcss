@@ -1,6 +1,7 @@
 
 # Changelog
 
+v3.0.0 - Upgrade node to v14 LTS
 v2.0.1 - Upgrade source-map
 v2.0.0 - Upgraded PostCSS to v8
 v1.2.8 - Upgrade dependencies
