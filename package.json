@@ -29,7 +29,7 @@
     "test": "echo '** TODO: Write tests! **'; echo 'Linting...'; eslint index.js --fix;"
   },
   "dependencies": {
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.23",
     "source-map": "0.8.0-beta.0"
   },
   "devDependencies": {
