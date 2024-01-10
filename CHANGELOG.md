@@ -1,6 +1,7 @@
 
 # Changelog
 
+v3.0.5 - (chore) bump deps
 v3.0.4 - DevEnv changes
 v3.0.3 - Upgrade dependencies
 v3.0.2 - Upgrade dependencies

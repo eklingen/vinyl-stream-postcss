@@ -30,7 +30,7 @@
     "test": "echo '** TODO: Write tests! **';"
   },
   "dependencies": {
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.33",
     "source-map": "0.8.0-beta.0"
   }
 }
