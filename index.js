@@ -7,15 +7,15 @@ const { join, dirname, basename, extname, relative } = require('path')
 const DEFAULT_OPTIONS = {
   postcss: {
     plugins: [],
-    options: {}
-  }
+    options: {},
+  },
 }
 
-function postcssWrapper (options = {}) {
+function postcssWrapper(options = {}) {
   const { SourceMapConsumer, SourceMapGenerator } = require('source-map')
   const postcss = require('postcss')
 
-  async function transform (file, encoding, callback) {
+  async function transform(file, encoding, callback) {
     options = { ...DEFAULT_OPTIONS, ...options }
     options.postcss = { ...DEFAULT_OPTIONS.postcss, ...options.postcss }
     options.postcss.options = { ...DEFAULT_OPTIONS.postcss.options, ...options.postcss.options, from: file.path, to: file.path, map: file.sourceMap ? { inline: false, sourcesContent: true, annotation: false } : false }
@@ -44,7 +44,7 @@ function postcssWrapper (options = {}) {
     if (file.sourceMap) {
       const sourceMap = JSON.parse(result.map)
 
-      sourceMap.sources = sourceMap.sources.map((source, index) => ~source.indexOf('file://') ? relative(file.base, source.substr(7)) : source) // Convert absolute to relative paths
+      sourceMap.sources = sourceMap.sources.map((source, index) => (~source.indexOf('file://') ? relative(file.base, source.substr(7)) : source)) // Convert absolute to relative paths
       sourceMap.file = join(dirname(file.relative), basename(file.relative, extname(file.relative)) + '.css')
 
       if (file.sourceMap && (typeof file.sourceMap === 'string' || file.sourceMap instanceof String)) {
